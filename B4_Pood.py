@@ -3,18 +3,18 @@ def pood():
     hinnad=[]
     kupitud=[]
     while True:
-        ost=input("Sisesta ost (lıpetamiseks 'lıpp'): ")
-        if ost=="lıpp":
+        ost=input("Sisesta ost (l√µpetamiseks 'l√µpp'): ")
+        if ost=="l√µpp":
             break
         hind=float(input("Sisesta hind: "))
         ostud.append(ost)
         hinnad.append(hind)
     while True:
         print("1. Kustuta ost ja lisa kupitud")
-        print("2. N‰ita ostud t‰hestikulises j‰rjekorras")
+        print("2. N√§ita ostud t√§hestikulises j√§rjekorras")
         print("3. Leia kalleim ja odavaim")
         print("4. Leia ostu hind")
-        print("5. Lıpeta")
+        print("5. L√µpeta")
         valik=input("Vali number: ")
         if valik=="1":
             kustutatav=input("Mis ost kustutada? ")
@@ -23,7 +23,7 @@ def pood():
                 kupitud.append(ostud[koht])
                 ostud.pop(koht)
                 hinnad.pop(koht)
-                print("Tekk:")
+                print("T√∞ekk:")
                 for i in range(len(kupitud)):
                     print(kupitud[i])
                 print("Kustutatud ja lisatud!")
@@ -33,26 +33,26 @@ def pood():
             uus_nimekiri=sorted(ostud)
             for i in range(len(uus_nimekiri)):
                 koht=ostud.index(uus_nimekiri[i])
-                print(uus_nimekiri[i],":",hinnad[koht],"Ä")
+                print(uus_nimekiri[i],":",hinnad[koht],"‚Ç¨")
         elif valik=="3":
             if ostud:
                 kallis=max(hinnad)
                 odav=min(hinnad)
                 kallis_koht=hinnad.index(kallis)
                 odav_koht=hinnad.index(odav)
-                print("Kalleim:",ostud[kallis_koht],"(",kallis,"Ä)")
-                print("Odavaim:",ostud[odav_koht],"(",odav,"Ä)")
+                print("Kalleim:",ostud[kallis_koht],"(",kallis,"‚Ç¨)")
+                print("Odavaim:",ostud[odav_koht],"(",odav,"‚Ç¨)")
             else:
-                print("Ostude nimekiri t¸hi!")
+                print("Ostude nimekiri t√ºhi!")
         elif valik=="4":
             otsitav=input("Mis ostu hind? ")
             if otsitav in ostud:
                 koht=ostud.index(otsitav)
-                print("Hind:",hinnad[koht],"Ä")
+                print("Hind:",hinnad[koht],"‚Ç¨")
             else:
                 print("Ei leitud!")
         elif valik=="5":
-            print("Lıpp!")
+            print("L√µpp!")
             break
         else:
             print("Vale valik!")
