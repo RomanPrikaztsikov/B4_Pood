@@ -3,21 +3,21 @@ def pood():
     hinnad=[]
     ostetud=[]
     while True:
-        ost=input("Sisesta ost (lõpetamiseks 'lõpp'): ")
+        ost=input("Sisesta ostud (lõpetamiseks 'lõpp'): ")
         if ost=="lõpp":
             break
         hind=float(input("Sisesta hind: "))
         ostud.append(ost)
         hinnad.append(hind)
     while True:
-        print("1. Kustuta ost ja lisa ostetud")
+        print("1. Kustuta ostud ja lisa ostetud")
         print("2. Näita ostud tähestikulises järjekorras")
         print("3. Leia kalleim ja odavaim")
         print("4. Leia ostu hind")
         print("5. Lõpeta")
         valik=input("Vali number: ")
         if valik=="1":
-            kustutatav=input("Mis ost kustutada? ")
+            kustutatav=input("Mis ostud kustutada? ")
             if kustutatav in ostud:
                 koht=ostud.index(kustutatav)
                 ostetud.append(ostud[koht])
