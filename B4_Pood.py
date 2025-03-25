@@ -1,7 +1,7 @@
 def pood():
     ostud=[]
     hinnad=[]
-    kupitud=[]
+    ostetud=[]
     while True:
         ost=input("Sisesta ost (lõpetamiseks 'lõpp'): ")
         if ost=="lõpp":
@@ -10,7 +10,7 @@ def pood():
         ostud.append(ost)
         hinnad.append(hind)
     while True:
-        print("1. Kustuta ost ja lisa kupitud")
+        print("1. Kustuta ost ja lisa ostetud")
         print("2. Näita ostud tähestikulises järjekorras")
         print("3. Leia kalleim ja odavaim")
         print("4. Leia ostu hind")
@@ -20,11 +20,12 @@ def pood():
             kustutatav=input("Mis ost kustutada? ")
             if kustutatav in ostud:
                 koht=ostud.index(kustutatav)
-                kupitud.append(ostud[koht])
+                ostetud.append(ostud[koht])
                 ostud.pop(koht)
                 hinnad.pop(koht)
-                for i in range(len(kupitud)):
-                    print(kupitud[i])
+                print("Tšekk:")
+                for i in range(len(ostetud)):
+                    print(ostetud[i])
                 print("Kustutatud ja lisatud!")
             else:
                 print("Ei leitud!")
