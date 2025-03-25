@@ -23,7 +23,6 @@ def pood():
                 kupitud.append(ostud[koht])
                 ostud.pop(koht)
                 hinnad.pop(koht)
-                print("Tðekk:")
                 for i in range(len(kupitud)):
                     print(kupitud[i])
                 print("Kustutatud ja lisatud!")
