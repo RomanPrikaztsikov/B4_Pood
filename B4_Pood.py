@@ -24,14 +24,14 @@ def pood():
                 ostud.pop(koht)
                 hinnad.pop(koht)
                 print("Tšekk:")
-                for i in range(ostetud):
+                for i in range(len(ostetud)):
                     print(ostetud[i])
                 print("Kustutatud ja lisatud!")
             else:
                 print("Ei leitud!")
         elif valik=="2":
             uus_nimekiri=sorted(ostud)
-            for i in range(uus_nimekiri):
+            for i in range(len(uus_nimekiri)):
                 koht=ostud.index(uus_nimekiri[i])
                 print(uus_nimekiri[i],":",hinnad[koht],"€")
         elif valik=="3":
